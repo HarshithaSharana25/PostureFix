@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<style>
+    .content-container {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between the sections */
+        align-items: center; /* Align items vertically center */
+        padding: 20px; /* Padding around the container */
+    }
+
+    .about-section {
+        background-color: #f9f9f9; /* Light gray background */
+        padding: 20px; /* Padding around the content */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for a subtle lift effect */
+        max-width: 600px; /* Set a maximum width */
+        margin: 0 5px 0 0; /* Margin to the right */
+        font-family: Arial, sans-serif; /* Change to desired font */
+        flex: 1; /* Allow flex-grow */
+    }
+
+    .about-section h1 {
+        font-size: 28px; /* Larger font size for the heading */
+        color: #333; /* Dark text color */
+        font-family: 'Lucida Handwriting';
+    }
+
+    .about-section p {
+        font-size: 16px; /* Normal font size for paragraphs */
+        line-height: 1.6; /* Line height for readability */
+        color: #666; /* Slightly darker text color */
+    }
+
+    .gif-section {
+        max-width: 1200px; /* Set a maximum width */
+        flex: 1; /* Allow flex-grow */
+        margin-left: 120px; /* Increase margin to the left for more space */
+    }
+
+    .gif-section img {
+        max-width: 100%; /* Ensure the image fits within the container */
+        border-radius: 8px; /* Optional: Rounded corners for the image */
+    }
+</style>
+
+<div class="content-container">
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>
+            PostureFix is a revolutionary website designed to promote healthy posture and prevent the detrimental effects of prolonged sitting. 
+            Our innovative system monitors your posture in real-time, providing instant feedback and personalized recommendations.<br> 
+            By leveraging advanced technology, we generate insightful analysis reports, visualized through intuitive graphs,
+            to track your progress over time.Our dedicated chatbot is always available to answer your questions, 
+            offer expert advice, and guide you towards a healthier posture.<br><br>
+        </p>
+    </div>
+    
+    <div class="gif-section">
+        <img src="static\posture-unscreen.gif" width="100%"; alt="Finance GIF"/>
+    </div>    
+</div>
+<br><br><br><br>
+{% endblock %}

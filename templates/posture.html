@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posture Detection</title>
+    <link rel="stylesheet" href='/finalproj.css'>
+</head>
+<body class="two">
+    <h1 class="yoyo">Posture Detection</h1>
+    <div class="video-container" style="text-align: center;">
+        <img src="/video_feed" width="640" height="480">
+    </div>
+    <p class="para">Press 'Q' to stop the detection and view your posture statistics.</p>
+
+    <script>
+        document.addEventListener('keypress', function(event) {
+            if (event.key.toLowerCase() === 'q') {
+                fetch('/stop_detection', {
+                    method: 'POST',
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = '/statistics';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        });
+    </script>
+</body>
+</html>
